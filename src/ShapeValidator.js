@@ -4,6 +4,6 @@ export default class ShapeValidator {
   }
 
   isValid(shape) {
-    return Object.entries(shape).every(([key, value]) => this.schema[key].isValid(value));
+    return Object.entries(shape ?? {}).every(([key, value]) => this.schema[key].isValid(value));
   }
 }
