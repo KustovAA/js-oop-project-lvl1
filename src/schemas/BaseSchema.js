@@ -1,4 +1,4 @@
-export default class BaseValidator {
+export default class BaseSchema {
   constructor(customRules = {}) {
     this.rules = [];
     this.customRules = customRules;

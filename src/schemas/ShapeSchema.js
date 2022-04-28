@@ -1,4 +1,4 @@
-export default class ShapeValidator {
+export default class ShapeSchema {
   shape(schema) {
     this.schema = schema;
   }

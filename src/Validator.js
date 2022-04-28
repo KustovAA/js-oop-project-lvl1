@@ -1,7 +1,6 @@
-import ArrayValidator from './ArrayValidator.js';
-import NumberValidator from './NumberValidator.js';
-import ShapeValidator from './ShapeValidator.js';
-import StringValidator from './StringValidator.js';
+import {
+  ArraySchema, NumberSchema, StringSchema, ShapeSchema,
+} from './schemas/index.js';
 
 export default class Validator {
   constructor() {
@@ -17,18 +16,18 @@ export default class Validator {
   }
 
   string() {
-    return new StringValidator(this.customRules.string);
+    return new StringSchema(this.customRules.string);
   }
 
   number() {
-    return new NumberValidator(this.customRules.number);
+    return new NumberSchema(this.customRules.number);
   }
 
   array() {
-    return new ArrayValidator(this.customRules.array);
+    return new ArraySchema(this.customRules.array);
   }
 
   object() {
-    return new ShapeValidator(this.customRules.object);
+    return new ShapeSchema(this.customRules.object);
   }
 }

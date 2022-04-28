@@ -1,6 +1,6 @@
-import BaseValidator from './BaseValidator.js';
+import BaseSchema from './BaseSchema.js';
 
-export default class ArrayValidator extends BaseValidator {
+export default class ArraySchema extends BaseSchema {
   constructor(...args) {
     super(...args);
     this.rules = [(value) => value == null || Array.isArray(value)];
